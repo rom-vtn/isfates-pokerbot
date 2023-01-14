@@ -159,7 +159,7 @@ class Session():
         if data == "reveal":
             #We shouldn't get this after 5 cards are on the table (option should be removed from menu)
             #If user ever does this, an exception might occur, but it won't freeze the bot
-            #I'm not gonna bother making a solution for script kiddos messing with the bot
+            #I'm not gonna bother making a solution for people messing with the bot
             self.actionStack.append("getTableCard")
         elif data == "retry":
             self.parent.bot.reply_to(self.firstMessage, "Restarting session...")
