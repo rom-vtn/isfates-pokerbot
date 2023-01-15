@@ -233,9 +233,9 @@ What do you want to do?""".format(self.playerCount, int(iterCount*winningChance)
         markup = telebot.types.InlineKeyboardMarkup()
         if len(self.tableCards) < 5: #Don't show button if all table cards are assigned
             markup.add(telebot.types.InlineKeyboardButton("Reveal a card on the table ➕", callback_data=self.idStr+"-mainMenuOnce-reveal"))
-        markup.add(telebot.types.InlineKeyboardButton("Retry game 🔄", callback_data=self.idStr+"-mainMenuOnce-retry"))
+        markup.add(telebot.types.InlineKeyboardButton("Start a new game (with a new deck) ♻️", callback_data=self.idStr+"-mainMenuOnce-retry"))
         if len(self.fullDeck) >= 7: #Make sure enough cards in the deck before offering a new game
-            markup.add(telebot.types.InlineKeyboardButton("Replay a game (no cards thrown away) ♻️", callback_data=self.idStr+"-mainMenuOnce-replay"))
+            markup.add(telebot.types.InlineKeyboardButton("Replay another game (no cards thrown away) 🔄", callback_data=self.idStr+"-mainMenuOnce-replay"))
         markup.add(telebot.types.InlineKeyboardButton("Quit ❌", callback_data=self.idStr+"-mainMenuOnce-quit"))
         # self.parent.bot.reply_to(self.firstMessage, inviteText, reply_markup=markup)
         self.parent.bot.edit_message_text(inviteText, reply_markup=markup, chat_id=self.currentBotMessage.chat.id, message_id=self.currentBotMessage.id)

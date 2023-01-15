@@ -3,9 +3,8 @@
 import pokerbot as pb
 
 #TODO implement tests for all math functions (that is, non-UI functions that return something) in the program
-#Maybe put tests in another file?
-#Tests working: card comparisons, poker hand scores
-#Tests to do: PokerCalculator.assignRandmCards
+#Tests working: card comparisons, poker hand scores, PokerCalculator.assignRandomCards
+#Tests to do: none yet
 
 def testCardComparison():
     try:
